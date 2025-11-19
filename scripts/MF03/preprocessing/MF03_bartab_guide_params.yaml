@@ -1,0 +1,21 @@
+# link all fastq files to indir
+indir:               "data/MF03/scRNA/CRISPR_fastq/"
+outdir:              "$RESULT_DIR/MF03/scRNA/bartab_guides/bartab_results/"
+whitelist_indir:     "$RESULT_DIR/MF03/scRNA/bartab_guides/whitelists/"
+ref:                 "$RESULT_DIR/MHC1_guide_library/MHC1_base_editing_library_EZH2_EED_SUZ12_18bp.fasta"
+mode:                "single-cell"
+input_type:          "fastq"
+constants:           "up"
+upconstant:          "GTTTCCAGCTTAGCTCTTAAAC"
+constantmismatches:  0.2
+up_coverage:         22
+trim_length:         True
+min_readlength:      18
+alnmismatches:       1
+cluster_unmapped:    True
+cluster_distance:    1
+cluster_ratio:       3
+umi_count_filter:    1
+umi_fraction_filter: 0
+max_cpus:            20
+max_memory:          "64.GB"
